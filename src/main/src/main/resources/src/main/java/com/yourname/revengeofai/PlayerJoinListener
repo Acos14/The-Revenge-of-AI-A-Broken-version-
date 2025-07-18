@@ -1,0 +1,4 @@
+@Override
+public void onInitialize() {
+    System.out.println("[TheRevengeOfAI] Mod started!");
+    PlayerJoinListener.register(this);  //PlayerJoinListener.register(this);
