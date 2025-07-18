@@ -1,0 +1,45 @@
+plugins {
+    id 'fabric-loom' version '1.2.+'
+    id 'java'
+}
+
+group = 'com.yourname' // cseréld a saját nevedre vagy domain-edre
+version = '1.0.0'
+archivesBaseName = 'therevengeofai'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "Fabric"
+        url = "https://maven.fabricmc.net/"
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.4"
+    mappings "net.fabricmc:yarn:1.21.4+build.4:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.14.21"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.86.0+1.21.4"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+loom {
+    runs {
+        client {
+            workingDirectory project.file("run")
+            property "minecraft.modList", "therevengeofai"
+        }
+        server {
+            workingDirectory project.file("run")
+            property "minecraft.modList", "therevengeofai"
+        }
+    }
+}
