@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "therevengeofai",
+  "version": "1.0.0",
+  "name": "The Revenge of AI (Broken version)",
+  "description": "A horror mod with unique experience for every player.",
+  "authors": ["YourName"],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.yourname.revengeofai.TheRevengeOfAIMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*"
+  }
+}
